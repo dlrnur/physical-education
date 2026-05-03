@@ -1,278 +1,232 @@
-# 🏃 context-pe: Kişisel Spor Zekâsı ve Performans Hafızası Sistemi
-
-*Beden eğitimi öğrencileri ve sporcular için, kişisel verilerden beslenen, sıfır halüsinasyon prensibiyle çalışan, çok modüllü spor öğrenme ve performans sistemi.*
-
----
 
 ## 1. Tez (Thesis)
 
-Spor ve beden eğitimi alanında en kritik eksik, **kişisel bağlama dayalı öğrenme ve performans yönetimidir.**
+Günümüzde bilgi:
+- dağınık
+- bağlamsız
+- kişiselleştirilmemiş
 
-context-pe’in çekirdek iddiası:
+context’in temel iddiası:
 
-**Kullanıcının tüm akademik, fiziksel ve performans verilerinin birleştiği kişisel wiki yapısı, tüm sistemin tek gerçek kaynağıdır.**
+**Kullanıcıya ait tüm bilgi tek bir yapılandırılmış wiki sisteminde toplanmalı ve tüm çıktı sistemleri sadece bu kaynaktan beslenmelidir.**
 
-Bu yapı:
-- öğrenme (dersler)
-- performans (antrenman)
-- sağlık (sakatlık & toparlanma)
-
-katmanlarını birleştirerek **kişisel spor zekâsı** üretir.
+Bu sayede:
+- bilgi anlam kazanır
+- modüller tutarlı çalışır
+- halüsinasyon ortadan kalkar
 
 ---
 
 ## 2. Problem
 
-### 📌 1. Genel Tavsiye Problemi
-- Herkese aynı antrenman önerileri
-- Kişisel geçmiş dikkate alınmıyor
+### 📌 1. Bilgi Dağınıklığı
+- Notlar farklı yerlerde
+- PDF’ler ayrı
+- Deneyimler ayrı
 
-### 📌 2. Veri Parçalanması
-- Antrenman uygulamaları
-- Notlar
-- Videolar
-- Sağlık verileri
+### 📌 2. Bağlam Eksikliği
+- AI sistemler kullanıcıyı tanımaz
+- Geçmiş veri kullanılmaz
 
-Birbirinden kopuk sistemler
+### 📌 3. Güven Problemi
+- AI içerik uydurabilir
+- Kaynak belirsizdir
 
-### 📌 3. Öğrenme & Performans Ayrılığı
-- Teori ayrı
-- Pratik ayrı
-
-### 📌 4. Güven Problemi
-- AI sistemleri veri uydurabiliyor
-- Spor/sağlık alanında riskli
+### 📌 4. Pasif Bilgi
+- Bilgi saklanır ama kullanılmaz
+- Aksiyona dönüşmez
 
 ---
 
-## 3. Nasıl Çalışır (How It Works)
+## 3. Çözüm (Solution)
 
-### Temel İçgörü 1 — Kişisel Wiki = Tek Gerçek Kaynak
+context, üç ana modülden oluşur:
+
+- **context-wiki → Bilgi Katmanı**
+- **context-narrate → Anlatı Katmanı**
+- **context-kiosk → Etkileşim Katmanı**
+
+➡️ Sistem döngüsü:
+
+**Veri → Anlam → Anlatı → Etkileşim**
+
+---
+
+## 4. Sistem Bileşenleri
+
+---
+
+### 🧱 4.1 context-wiki (Core Layer)
+
+Sistemin temelidir.
 
 Toplanan veriler:
-- Ders notları
-- Antrenman kayıtları
-- Video analizleri
-- Sakatlık geçmişi
-- Performans testleri
-- Uyku & toparlanma
+- akademik içerikler
+- kişisel notlar
+- performans verileri
+- analizler
+- ilişkiler
 
-➡️ Tek yapı: **context-pe wiki**
+#### Özellikler:
+- yapılandırılmış veri
+- ilişkisel bilgi ağı
+- konu bağlantıları
+- zaman bazlı kayıtlar
 
----
-
-### Temel İçgörü 2 — Veri → Anlam → İlişki
-
-Örnek ilişkilendirme:
-
-- Squat → diz valgusu
-- Koşu yükü ↑
-- Uyku ↓
-- Diz ağrısı ↑
-
-➡️ Sistem çıkarımı:
-**yük + teknik + toparlanma ilişkisi**
+#### Kural:
+> Wiki’de olmayan bilgi sistem için yoktur.
 
 ---
 
-### Temel İçgörü 3 — Strict RAG
+### 🎙️ 4.2 context-narrate (Output Layer)
 
-Kural:
+Wiki verisini şu formatlara dönüştürür:
+- sesli anlatım
+- podcast
+- özet içerik
 
-> Wiki’de olmayan veri yoktur.
+#### Özellikler:
+- çok sesli anlatım sistemi
+- kritik bilgileri vurgulama
+- kaynak seslendirme (citation voice)
+- show notes üretimi
+
+#### Amaç:
+➡️ Hands-free öğrenme
+
+---
+
+### 🖥️ 4.3 context-kiosk (Interface Layer)
+
+Kullanıcının sistemle etkileşim kurduğu katmandır.
+
+#### Özellikler:
+- soru-cevap sistemi
+- dashboard
+- veri görselleştirme
+- hızlı erişim
+
+#### Örnek Kullanım:
+- “Bu hafta performansım nasıl?”
+- “Bu konuyu özetle”
+- “Geçmiş veriye göre öneri ver”
+
+---
+
+## 5. Temel İçgörüler
+
+### 🔹 1. Tek Kaynak Prensibi
+Tüm modüller sadece context-wiki’den beslenir.
+
+---
+
+### 🔹 2. Strict RAG
+- veri uydurulmaz
+- eksik veri → uyarı verilir
+- tüm çıktılar izlenebilir
+
+---
+
+### 🔹 3. Modüler Mimari
+- wiki → veri
+- narrate → içerik
+- kiosk → etkileşim
+
+---
+
+### 🔹 4. Kişiselleştirme
+- sistem kullanıcıya özeldir
+- genel öneri vermez
+
+---
+
+## 6. Mimari (Architecture)
+
+Kullanıcı Verisi  
+↓  
+Ingestion Layer  
+↓  
+Structuring & Tagging  
+↓  
+Relation Engine  
+↓  
+context-wiki  
+↓  
+Strict RAG  
+↓  
+Modüller:  
+- context-narrate  
+- context-kiosk  
+
+---
+
+## 7. Kullanım Senaryosu
+
+Kullanıcı:
+- ders notu yükler
+- antrenman kaydeder
+- video ekler
 
 Sistem:
-- uydurma yapmaz
-- eksik veride kesin konuşmaz
+- veriyi işler
+- ilişkileri kurar
+- analiz yapar
+
+Kullanıcı sorar:
+> “Bu hafta neye dikkat etmeliyim?”
+
+Sistem:
+- geçmiş veriye bakar
+- riskleri analiz eder
+- kişisel öneri sunar
 
 ---
 
-### Temel İçgörü 4 — Modüler Yapı
+## 8. Başarı Kriterleri
 
-- narrate-pe
-- cert-pe
-- coach-pe
-- performance-map
-
----
-
-## 4. Mimari (Architecture)
-
-### 1. Ingestion Layer
-- PDF
-- Notlar
-- Antrenman logları
-- Video
-- Sağlık verileri
-
----
-
-### 2. Structuring Agent
-- konu çıkarımı
-- etiketleme
-- veri formatlama
-
----
-
-### 3. Relation Engine
-- teknik ↔ sakatlık
-- yük ↔ performans
-- uyku ↔ yorgunluk
-
----
-
-### 4. Personal Wiki Builder
-
-Alt yapılar:
-
-- Akademik Wiki
-- Antrenman Wiki
-- Performans Wiki
-- Teknik Analiz Wiki
-- Sakatlık Wiki
-- Toparlanma Wiki
-
----
-
-### 5. Strict RAG Layer
-
-Tüm modüller sadece buradan veri alır.
-
----
-
-### 6. Output Modülleri
-
-- narrate-pe
-- cert-pe
-- coach-pe
-- performance-map
-
----
-
-## 5. Wiki Yapısı
-
-### 📚 Akademik Wiki
-- Anatomi
-- Egzersiz fizyolojisi
-- Antrenman bilimi
-- Spor psikolojisi
-
----
-
-### 🏋️ Antrenman Wiki
-- Kuvvet
-- Dayanıklılık
-- Teknik çalışmalar
-
----
-
-### 📊 Performans Wiki
-- VO2max
-- Cooper testi
-- 1RM
-- gelişim trendleri
-
----
-
-### 🎥 Teknik Analiz Wiki
-- hareket analizi
-- video çıkarımları
-
----
-
-### ⚠️ Sakatlık & Risk Wiki
-- ağrı kayıtları
-- risk ilişkileri
-- uyarılar
-
----
-
-### 😴 Toparlanma Wiki
-- uyku
-- yorgunluk
-- beslenme
-
----
-
-## 6. Modüller
-
-### 🎙️ narrate-pe
-- ders anlatımı
-- performans özeti
-
----
-
-### 🧪 cert-pe
-- sadece yüklenen kaynaklardan sınav
-
----
-
-### 🧠 coach-pe
-- tamamen kişisel veri bazlı öneri
-
----
-
-### 📈 performance-map
-- gelişim grafikleri
-- yük analizi
-- risk haritası
-
----
-
-## 7. Başarı Kriterleri
-
-- %100 veri doğruluğu
+- %100 kaynak izlenebilirliği
 - %0 halüsinasyon
-- izlenebilir öneriler
-- kullanıcı güveni
-- performans gelişimi
-
----
-
-## 8. Fark
-
-❌ Genel sistem:
-"Haftada 3 gün koş"
-
-✅ context-pe:
-"Yük arttı + diz ağrısı + düşük uyku → toparlanma odaklı ilerle"
+- yüksek kullanıcı güveni
+- kişiselleştirilmiş çıktı
+- modüller arası tutarlılık
 
 ---
 
 ## 9. Vizyon
 
-**Sporcunun ikinci beyni**
+**context = kullanıcının ikinci beyni**
 
 ---
 
-## 10. Profesyonel Tanım
+## 10. Ürün Tanımı
 
-context-pe, spor bilimleri öğrencileri ve sporcular için geliştirilen, akademik bilgi, antrenman verisi, performans ölçümleri ve sağlık kayıtlarını tek bir kişisel bilgi ağı altında birleştiren yapay zekâ destekli bir sistemdir. Sistem yalnızca kullanıcı verisine dayanır ve sıfır halüsinasyon prensibiyle çalışır.
+context, kullanıcıya ait bilgileri tek bir yapılandırılmış wiki sisteminde toplayan, bu verileri anlamlandıran ve sesli anlatım ile etkileşim katmanları üzerinden erişilebilir hale getiren modüler bir yapay zekâ platformudur.
 
 ---
 
-## 11. Sistem Akışı
+## 11. Sistem Döngüsü
 
-Kullanıcı Verisi  
+Veri  
 ↓  
-Ingestion  
+Wiki  
 ↓  
-LLM Anlamlandırma  
+Anlamlandırma  
 ↓  
-Kişisel Wiki  
+Anlatı  
 ↓  
-Strict RAG  
+Etkileşim  
 ↓  
-Modüller  
+Yeni veri  
 
 ---
 
 ## 12. Kısa Özet
 
-context-pe:
+context:
 
-- kişisel antrenman hafızası  
-- akademik öğrenme sistemi  
-- performans analiz motoru  
-- sakatlık risk farkındalığı  
-- AI destekli gelişim haritası
+- kişisel bilgi hafızası  
+- anlatı üretim sistemi  
+- etkileşim platformu  
+- güvenilir AI altyapısı  
+
+---
